@@ -1,0 +1,37 @@
+{
+  "hosting": {
+    "public": "_dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "helloWorld",
+        "function": "helloWorld"
+      },
+      {
+        "source": "temperature",
+        "function": "temperature"
+      },
+
+      {
+        "source": "factorial",
+        "function": "factorial"
+      }
+
+    ]
+  }
+}
